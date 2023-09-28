@@ -11,7 +11,16 @@ Or if you already have Bat installed:
 bat install neofetch-git
 ```
 
-## How does it work?
+Installation:
+```bash
+makepkg -sri 
+```
+Or with make:
+```bash
+sudo/doas make install 
+```
+
+# How does it work?
 
 It first git clones the aur package's git url to ~/bat/{package}
 Then it cd's into the directory
