@@ -23,5 +23,5 @@ sudo/doas make install
 # How does it work?
 
 It first git clones the aur package's git url to ~/bat/{package}
-Then it cd's into the directory
-And then it runs makepkg -sri, and you're done! 
+<br>Then it cd's into the directory
+<br>And then it runs makepkg -sri, and you're done! 
