@@ -1,5 +1,5 @@
 pkgname=bat
-pkgver=1.0
+pkgver=1.2
 pkgrel=1 
 pkgdesc="A simple 'package manager' for aur"
 arch=('any')
