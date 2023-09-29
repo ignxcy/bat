@@ -6,6 +6,6 @@ arch=('any')
 
 package() {
   cd .. 
-  sudo install -Dm755 ./main.py /usr/bin/bat 
-  chmod +x /usr/bin/bat 
+  sudo install -Dm755 ./main.py /usr/bin/bat-install 
+  chmod +x /usr/bin/bat-install 
 }

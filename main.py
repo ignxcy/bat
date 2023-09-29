@@ -42,9 +42,9 @@ def install(package):
 if __name__ == "__main__":
     rootcheck()
 
-    if len(sys.argv) != 3 or sys.argv[1] != 'install':
-        print("Usage: python3 main.py install {package}")
+    if sys.argv[1] == "":
+        print("Usage: bat-install {package}")
         sys.exit(1)
 
-    package = sys.argv[2]
+    package = sys.argv[1]
     install(package)

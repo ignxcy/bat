@@ -1,2 +1,2 @@
 install:
-	cp main.py /usr/bin/bat
+	cp main.py /usr/bin/bat-install
