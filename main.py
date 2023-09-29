@@ -14,9 +14,9 @@ def install(package):
         package_directory = f"{user_home}/bat/{package}"
 
         if os.path.exists(package_directory):
-            print(f"The package directory '{package_directory}' already exists. Updating...")
-            os.chdir(package_directory)  # Change the current working directory here
-            subprocess.run("git pull", shell=True, check=True)
+            print(f"Running makepkg -sri in {package_directory}...")
+            subprocess.run("makepkg -sri", shell=True, check=True, cwd=package_directory)
+
         else:
             clone_command = f"git clone https://aur.archlinux.org/{package}.git {package_directory}"
             subprocess.run(clone_command, shell=True, check=True)
@@ -42,9 +42,10 @@ def install(package):
 if __name__ == "__main__":
     rootcheck()
 
-    if sys.argv[1] == "":
-        print("Usage: bat-install {package}")
-        sys.exit(1)
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "":
+            print("Usage: bat-install {package}")
+            sys.exit(1)
 
     package = sys.argv[1]
     install(package)
